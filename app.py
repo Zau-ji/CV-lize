@@ -6,7 +6,7 @@ from google import genai
 
 st.set_page_config(
     page_title="CV-lize",
-    page_icon="📄",
+    page_icon="cv_lize_logo.png",
     layout="wide"
 )
 
@@ -173,11 +173,10 @@ def score_color(score):
         return "🟡"
     return "🔴"
 
-
 # ---------- UI ----------
 
-st.title("📄 CV-lize")
-st.caption("AI-powered resume & ATS compatibility checker")
+st.image("cv_lize_logo.png", width=220)
+st.caption("AI-powered CV & ATS compatibility checker")
 
 st.markdown(
     "Upload your CV and optionally paste the job description you are applying for. "
