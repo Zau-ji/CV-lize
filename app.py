@@ -5,7 +5,7 @@ from docx import Document
 from google import genai
 
 st.set_page_config(
-    page_title="ResumeLens",
+    page_title="CV-lize",
     page_icon="📄",
     layout="wide"
 )
@@ -149,7 +149,7 @@ RESUME:
 """
 
     response = client.models.generate_content(
-        model="gemini-2.5-flash",
+        model="gemini-3.6-flash",
         contents=prompt,
         config={
             "response_mime_type": "application/json"
@@ -176,12 +176,12 @@ def score_color(score):
 
 # ---------- UI ----------
 
-st.title("📄 ResumeLens")
+st.title("📄 CV-lize")
 st.caption("AI-powered resume & ATS compatibility checker")
 
 st.markdown(
     "Upload your CV and optionally paste the job description you are applying for. "
-    "ResumeLens will evaluate ATS compatibility, job relevance, content quality, "
+    "CV-lize will evaluate ATS compatibility, job relevance, content quality, "
     "and how your CV looks to a recruiter during a quick first scan."
 )
 
